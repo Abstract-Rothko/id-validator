@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    min-width: 600px;
+    max-width: 800px;
+    min-height: 550px;
+    max-height: 800px;
+    border: 2px solid black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 15px 15px 0px 0px #242424;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+    color: #333333;
+}
+
+#id-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px;
+    border: 2px solid #242424;
+    width: 550px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    width: 450px;
+    text-align: center;
+    border: 1.5px solid #242424;
+    font-size: 1.15rem;
+}
+
+label {
+    padding: 5px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+#verify-btn {
+    width: 450px;
+    height: 45px;
+    background-color: #242424;
+    border: 1px solid #242424;
+    color: aliceblue;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#verify-btn:hover {
+    background-color: darkgray;
+    color: #242424;
+    cursor: pointer;
+}
+
+.successful {
+    background-color: #D9E6E2;
+    color: #008F4D;
+    border: 2px solid #008F4D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    height: 225px;
+    margin: 25px;
+}
+
+.unsuccessful {
+    background-color: #d4edda;
+    color: crimson;
+    border: 2px solid crimson;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    height: 225px;
+    margin: 25px;
+}
+
+h2, p {
+    margin: 5px;
+}
+
+.emoji {
+    height: 150px;
+    width: 150px;
+}

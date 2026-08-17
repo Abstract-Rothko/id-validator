@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA ID Validator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <main>
+        <h1>SA ID Validator</h1>
+
+        <form id="id-container">
+            <div class="input">
+                <label for="fname">Name: </label>
+                <input
+                type="text"
+                minlength="2"
+                maxlength="15"
+                id="fname"
+                name="name"
+                placeholder="Lundanele"
+                required
+                >
+            </div>
+
+            <div class="input">
+                <label for="surname">Surname: </label>
+                <input
+                type="text"
+                minlength="2"
+                maxlength="15"
+                id="surname"
+                name="name"
+                placeholder="Melokuhle"
+                required
+                >
+            </div>
+
+            <div class="input">
+            <label for="id-number">Identity Number: </label>
+            <input
+            type="text"
+            inputmode="numeric"
+            minlength="13"
+            maxlength="13"
+            pattern="[0-9]{13}"
+            name="idNumber"
+            id="id-number"
+            placeholder="7392846105938"
+            required
+            >
+            </div>
+
+            <button type="submit" id="verify-btn">Verify</button>
+        </form>
+
+        
+        <section class="successful" style="display: none;">
+            <img class="emoji" src="./assets/laughing.png" alt="laughing blue emoji">
+            <h2>Thank You, <span id="success"></span>!</h2>
+            <p>Your personal information will be harvested for insurance fraud.</p>
+        </section>
+
+        <section class="unsuccessful" style="display: none;">
+            <img class="emoji" src="./assets/face-palm.png" alt="face palm blue emoji">
+            <h2>What the heck, <span id="fail"></span>?!</h2>
+            <p>That ID is completely fake! Go scam  someone else!</p>
+        </section>
+    </main>
+
+    <script type="module" src="./src/dom.js"></script>
+</body>
+</html>
