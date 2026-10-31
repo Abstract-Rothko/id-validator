@@ -1,15 +1,3 @@
-// Write a function validateID(idString) that takes a string of characters
-// and determines if it is a valid South African ID number. A valid ID must meet the following criteria:
-// It must be exactly 13 characters long.
-// It must contain only numbers.
-// The first 6 digits represent a valid date in YYMMDD format (e.g., month cannot be greater than 12,
-// day cannot be greater than 31).
-// The function should return true if it meets all criteria, and false if it fails any of them.
-
-// TODO
-// Deal with future dates in idString
-// Implement the Luhn Algorithm
-
 function validateID(idString) {
     // Checks length
     if(idString.length !== 13) return false;
