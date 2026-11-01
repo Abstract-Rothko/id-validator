@@ -1,6 +1,6 @@
 # South African ID Validator
 
-This website is able to detect if the id number someone uses is a real, valid Id or not.
+This website is able to detect if the id number someone uses is a real, valid Id number or not. It then updates with a funny response depending on whether or not the id number presented is valid.
 
 ## Images
 ### Home Screen
