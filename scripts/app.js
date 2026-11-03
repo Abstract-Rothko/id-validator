@@ -1,27 +1,3 @@
-function isValidDate(year, month, day) {
-    let date = new Date(`${year}-${month}-${day}`);
-    return (
-        date.getFullYear() === year &&
-        date.getMonth() === (month - 1) &&
-        date.getDate() === day
-    );
-}
-
-function checksum(idString) {
-    let sum = 0;
-    for(let i = 0; i < idString.length; i++) {
-        let amount = parseInt(idString[i]);
-        if(i % 2 !== 0) {
-            amount  *= 2;
-            if(amount >= 10) {
-                amount -= 9;
-            }
-        }
-        sum += amount;
-    }
-    return sum % 10 === 0;
-}
-
 function validateID(idString) {
     // Checks length
     if(idString.length !== 13) return false;
@@ -42,10 +18,33 @@ function validateID(idString) {
     let DAY = parseInt(idString.substring(4, 6));
 
     // This adjusts the YEAR variable
-    const addYears = parseInt(new Date().getFullYear()) % 1000 <= YEAR ? 2000 : 1900;
-    YEAR += addYears;
+    YEAR += parseInt(new Date().getFullYear()) % 100 <= YEAR ? 1900 : 2000;
 
     return isValidDate(YEAR, MONTH, DAY) && checksum(idString);
+}
+
+function isValidDate(year, month, day) {
+    let date = new Date(year, month - 1, day);
+    return (
+        date.getFullYear() === year &&
+        date.getMonth() === (month - 1) &&
+        date.getDate() === day
+    );
+}
+
+function checksum(idString) {
+    let sum = 0;
+    for(let i = 0; i < idString.length; i++) {
+        let amount = parseInt(idString[i]);
+        if(i % 2 !== 0) {
+            amount  *= 2;
+            if(amount >= 10) {
+                amount -= 9;
+            }
+        }
+        sum += amount;
+    }
+    return sum % 10 === 0;
 }
 
 export default validateID;
