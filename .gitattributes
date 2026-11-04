@@ -1,6 +1,2 @@
 # Normalize all text files to use LF in the remote respository
 * text=auto
-
-# Explicitly ensure Windows-specific scripts keep CRLF to prevent execution error
-*.bat text eol=crlf
-*.cmd text eol=crlf
