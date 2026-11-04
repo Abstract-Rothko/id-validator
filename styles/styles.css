@@ -42,7 +42,8 @@ body {
     padding: var(--space-lg) 1rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     font-family: var(--font-body);
     font-size: var(--text-base);
     line-height: var(--line-height);
@@ -70,6 +71,21 @@ h2 {
     font-size: var(--text-h2);
     line-height: 1.2;
     overflow-wrap: anywhere;
+}
+
+.psa {
+    color: var(--muted);
+    font-size: var(--space-md);
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 /* --- Form --- */
