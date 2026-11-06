@@ -1,0 +1,27 @@
+{
+  "name": "id-validator",
+  "version": "1.0.0",
+  "description": "A satirical South African ID number validator",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abstract-Rothko/id-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abstract-Rothko/id-validator/issues"
+  },
+  "homepage": "https://github.com/Abstract-Rothko/id-validator#readme",
+  "author": "Adamu Abdullahi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "vitest": "^5.1.0"
+  }
+}
