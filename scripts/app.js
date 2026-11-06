@@ -1,29 +1,29 @@
-function validateID(idString) {
+export default function validateID(idString) {
     // Checks length
     if(idString.length !== 13) return false;
 
     // Checks if all chars are digits
-    if(!/\d{13}/g.test(idString)) return false;
+    if(!/^\d{13}$/.test(idString)) return false;
 
     // Checks citizenship
-    const nationality = parseInt(idString.substring(10, 11));
-    if(!/[0-2]/.test(nationality)) return false;
+    const nationality = parseInt(idString.substring(10, 11), 10);
+    if(nationality > 2) return false;
 
     // This index can only be 8 or 9
-    const index = parseInt(idString.substring(11, 12));
+    const index = parseInt(idString.substring(11, 12), 10);
     if(!/[89]/.test(index)) return false;
 
-    let YEAR = parseInt(idString.substring(0, 2));
-    let MONTH = parseInt(idString.substring(2, 4));
-    let DAY = parseInt(idString.substring(4, 6));
+    let year = parseInt(idString.substring(0, 2), 10);
+    let month = parseInt(idString.substring(2, 4), 10);
+    let day = parseInt(idString.substring(4, 6), 10);
 
     // This adjusts the YEAR variable
-    YEAR += parseInt(new Date().getFullYear()) % 100 <= YEAR ? 1900 : 2000;
+    year += new Date().getFullYear() % 100 <= year ? 1900 : 2000;
 
-    return isValidDate(YEAR, MONTH, DAY) && checksum(idString);
+    return isValidDate(year, month, day) && checksum(idString);
 }
 
-function isValidDate(year, month, day) {
+export function isValidDate(year, month, day) {
     let date = new Date(year, month - 1, day);
     return (
         date.getFullYear() === year &&
@@ -32,10 +32,10 @@ function isValidDate(year, month, day) {
     );
 }
 
-function checksum(idString) {
+export function checksum(idString) {
     let sum = 0;
     for(let i = 0; i < idString.length; i++) {
-        let amount = parseInt(idString[i]);
+        let amount = parseInt(idString[i], 10);
         if(i % 2 !== 0) {
             amount  *= 2;
             if(amount >= 10) {
@@ -46,5 +46,3 @@ function checksum(idString) {
     }
     return sum % 10 === 0;
 }
-
-export default validateID;
