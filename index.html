@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZA ID Validator</title>
+
+    <!-- Additional metadata -->
+    <meta name="description" content="A satrical website that returns a funny response when validating if the the id number is valid or not">
+    <meta name="author" content="Adamu Abdullahi">
+    <meta name="robots" content="index, follow">
+
+    <!-- Social Media -->
+    <meta property="og:title" content="ZA ID Validator">
+    <meta property="og:description" content="A satrical website that returns a funny response when validating if the the id number is valid or not">
+    <meta property="og:image" content="assets/icon.svg">
+
     <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -13,9 +24,14 @@
     </header>
 
     <main>
-        <h1>ZA ID Validator</h1>
+        <h1 id="page-title">ZA ID Validator</h1>
 
-        <form id="id-container">
+        <noscript>
+            <p>This page needs Javascript turned on to check an ID number</p>
+        </noscript>
+
+        <form id="id-container" aria-labelledby="page-title">
+            <p class="form-note">All fields are required.</p>
             <div class="input">
                 <label for="fname">Name: </label>
                 <input
@@ -56,7 +72,7 @@
                 >
             </div>
 
-            <button type="submit" id="verify-btn">Verify</button>
+            <button type="submit" id="verify-btn" aria-label="verify id button">Verify</button>
         </form>
 
         <section class="successful" style="display: none;">
