@@ -1,9 +1,9 @@
 import validateID from "./app.js";
 
 const form = document.getElementById("id-container");
-form.addEventListener("submit", handleClick);
+form.addEventListener("submit", handleSubmit);
 
-function handleClick(event) {
+function handleSubmit(event) {
     event.preventDefault();
     
     const firstName = document.getElementById("fname");
@@ -19,7 +19,7 @@ function handleClick(event) {
     const fName = firstName.value.trim();
     const surname = lastName.value.trim();
 
-    const idNum = id.value;
+    const idNum = id.value.trim();
     const status = validateID(idNum);
 
     if(status) {
