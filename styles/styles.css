@@ -73,20 +73,6 @@ h2 {
     overflow-wrap: anywhere;
 }
 
-.psa {
-    color: var(--muted);
-    font-size: var(--space-md);
-    text-align: center;
-}
-
-header {
-    margin-bottom: 20px;
-}
-
-footer {
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
 
 /* --- Form --- */
 #id-container {
@@ -202,6 +188,21 @@ input:user-invalid {
     object-fit: contain;
 }
 
+.psa {
+    color: var(--muted);
+    font-size: var(--text-base);
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
     #verify-btn {
@@ -217,5 +218,9 @@ input:user-invalid {
 
     #id-number {
         letter-spacing: 0.06em;
+    }
+
+    main {
+        width: min(90%, 36rem);
     }
 }

@@ -6,14 +6,9 @@
     <title>ZA ID Validator</title>
 
     <!-- Additional metadata -->
-    <meta name="description" content="A satrical website that returns a funny response when validating if the the id number is valid or not">
+    <meta name="description" content="A satirical website that returns a funny response when validating if the the id number is valid or not">
     <meta name="author" content="Adamu Abdullahi">
     <meta name="robots" content="index, follow">
-
-    <!-- Social Media -->
-    <meta property="og:title" content="ZA ID Validator">
-    <meta property="og:description" content="A satrical website that returns a funny response when validating if the the id number is valid or not">
-    <meta property="og:image" content="assets/icon.svg">
 
     <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
     <link rel="stylesheet" href="styles/styles.css">
@@ -27,7 +22,7 @@
         <h1 id="page-title">ZA ID Validator</h1>
 
         <noscript>
-            <p>This page needs Javascript turned on to check an ID number</p>
+            This page needs Javascript turned on to check an ID number
         </noscript>
 
         <form id="id-container" aria-labelledby="page-title">
@@ -75,17 +70,17 @@
             <button type="submit" id="verify-btn" aria-label="verify id button">Verify</button>
         </form>
 
-        <section class="successful" style="display: none;">
+        <div class="successful" style="display: none;">
             <img class="emoji" src="./assets/laughing.png" alt="laughing blue emoji">
             <h2>Thank You, <span id="success"></span>!</h2>
             <p>Your personal information will be harvested for insurance fraud.</p>
-        </section>
+        </div>
 
-        <section class="unsuccessful" style="display: none;">
+        <div class="unsuccessful" style="display: none;">
             <img class="emoji" src="./assets/face-palm.png" alt="face palm blue emoji">
             <h2>What the heck, <span id="fail"></span>?!</h2>
             <p>That ID is completely fake! Go scam someone else!</p>
-        </section>
+        </div>
     </main>
 
     <footer>
