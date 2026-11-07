@@ -1,5 +1,5 @@
 import validateID, {isValidDate, checksum} from "../scripts/app.js";
-import { describe, test, it, expect } from "vitest";
+import { describe, it, expect } from "vitest";
 
 // validateID tests
 describe("validateID", () => {
