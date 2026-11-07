@@ -11,7 +11,7 @@
     --muted: #4a4a4a;
 
     /* --- Typography (fluid: scales smoothly between phone and desktop) --- */
-    --font-body: 'EB Garamond', Garamond, Georgia, 'Times New Roman', serif;
+    --font-body: Georgia, 'Times New Roman', serif;
     --text-base: clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
     --text-small: 1rem;
     --text-label: 1.125rem;
