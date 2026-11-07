@@ -1,4 +1,4 @@
-export default function validateID(idString) {
+export default function validateID(idString, today = new Date()) {
     // Checks length
     if(idString.length !== 13) return false;
 
@@ -18,7 +18,7 @@ export default function validateID(idString) {
     let day = parseInt(idString.substring(4, 6), 10);
 
     // This adjusts the YEAR variable
-    year += new Date().getFullYear() % 100 <= year ? 1900 : 2000;
+    year += today.getFullYear() % 100 <= year ? 1900 : 2000;
 
     return isValidDate(year, month, day) && checksum(idString);
 }
